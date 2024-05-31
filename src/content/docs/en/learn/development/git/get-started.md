@@ -6,11 +6,11 @@ next:
   label: Programming Language Types
 ---
 
-## What is Git?
+# What is Git?
 
 Git is a distributed version control system designed to track changes in source code during software development. It allows multiple developers to collaborate on projects efficiently by managing revisions, facilitating branching and merging, and providing a complete history of changes made to the codebase.
 
-### History of Git
+## History of Git
 
 Git was created by Linus Torvalds in 2005, the same developer behind the Linux kernel. Torvalds developed Git to address the limitations of existing version control systems like CVS and Subversion. He wanted a system that was fast, distributed, and capable of handling the massive scale of the Linux kernel development.
 

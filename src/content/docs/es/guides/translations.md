@@ -3,4 +3,9 @@ title: Traducciones
 description: Sobre las traducciones
 ---
 
-Las traducciones se irán añadiendo progresivamente. La barra lateral permanecerá sin traducir para mantener la coherencia y la facilidad de navegación en todos los idiomas.
+**Traducciones**
+=====================
+
+Queremos ofrecer soporte para la mayoría de idiomas posible para ayudar a la comunidad. Las traducciones se irán añadiendo progresivamente a la web.
+
+Recuerda que, si quieres colaborar, puedes ir a la página de [Contribuir](/es/guides/contribute). En esta página encontrarás información detallada sobre cómo puedes contribuir.

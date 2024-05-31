@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
-
-import { sidebar as enSidebar } from "./internationalization/en.mts";
-import { sidebar as esSidebar } from "./internationalization/es.mts";
+import { defaultThemeConfig } from "./internationalization/default.mts";
+import { themeConfig as enThemeConfig } from "./internationalization/en.mts";
+import { themeConfig as esThemeConfig } from "./internationalization/es.mts";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -11,7 +11,12 @@ export default defineConfig({
   lastUpdated: true,
   title: "Veloz",
   description: "Coming Soon",
+  ignoreDeadLinks: true,
   head: [
+    [
+      "link",
+      { rel: "icon", href: "/favicon.ico" }
+    ],
     [
       "link",
       { rel: "preconnect", href: "https://cdn.tpeoficial.com" }
@@ -26,25 +31,13 @@ export default defineConfig({
       label: "English",
       lang: "en",
       link: "/en",
-      themeConfig: {
-        nav: [
-          { text: "Home", link: "/en/" },
-          { text: "Examples", link: "/markdown-examples" }
-        ],
-        sidebar: enSidebar
-      }
+      themeConfig: enThemeConfig
     },
     es: {
       label: "Español",
       lang: "es",
       link: "/es",
-      themeConfig: {
-        nav: [
-          { text: "Home", link: "/en/" },
-          { text: "Examples", link: "/markdown-examples" }
-        ],
-        sidebar: esSidebar
-      }
+      themeConfig: esThemeConfig
     }
   },
   themeConfig: {
@@ -60,7 +53,7 @@ export default defineConfig({
       alt: "Veloz",
     },
     editLink: {
-      pattern: "https://github.com/TPEOficial/veloz/edit/main/src/content/docs/:path"
+      pattern: defaultThemeConfig.editLink.pattern
     },
     // https://vitepress.dev/reference/default-theme-config
     nav: [

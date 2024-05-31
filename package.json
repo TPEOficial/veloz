@@ -4,9 +4,13 @@
     "vue": "^3.4.27"
   },
   "scripts": {
-    "start": "node server/app --vitepress",
+    "start": "vitepress build && node server/app --vitepress",
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
     "docs:preview": "vitepress preview"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "jsdom": "^24.1.0"
   }
 }

@@ -1,4 +1,4 @@
-export const sidebar = [
+const sidebar = [
     {
         text: "Guides",
         items: [
@@ -65,10 +65,20 @@ export const sidebar = [
                 collapsed: true,
                 items: [
                     { text: "Get Started", link: "/en/learn/development/git/get-started" },
-                    { text: "First Steps", link: "/en/learn/development/git/first-steps" }
+                    { text: "First Steps", link: "/en/learn/development/git/first-steps" },
+                    { text: "Customizing Git", link: "/en/learn/development/git/customizing-git" }
                 ]
             }
         ]
 
     }
-]
+];
+
+export const themeConfig = {
+    nav: [
+        { text: "Home", link: "/en/" },
+        { text: "Examples", link: "/markdown-examples" }
+    ],
+    sidebar
+    // Default by Vitepress.
+};

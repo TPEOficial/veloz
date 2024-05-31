@@ -3,6 +3,9 @@ title: Contribuir
 description: Cómo contribuir al proyecto.
 ---
 
+**Contribuir**
+=====================
+
 ## ¿Cómo puedo contribuir?
  - Crea un nuevo curso, blog o tutorial.
  - Traduce un curso, blog o tutorial existente.
@@ -13,7 +16,7 @@ description: Cómo contribuir al proyecto.
  - Las páginas propuestas deben estar en formato md o mdx (el formato mdx sólo se aceptará en casos muy concretos).
  - Debe mantener una estructura clara y todo lo explicado debe ser lo más sencillo posible.
 
-### On your markdown page
+### En tu página markdown
 **Para insertar imágenes:** Envíanos la imagen a nuestro Discord o adjúntala en tu propuesta, recuerda que debe ser de buena calidad. En la etiqueta de la imagen debes poner en `src` el nombre de la imagen no la ruta, nosotros la sustituiremos por un ID de nuestro CDN, añade la propiedad `loading="lazy"` y las propiedades `width`, y `height`.
 
 Ejemplo:

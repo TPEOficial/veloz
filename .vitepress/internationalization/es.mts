@@ -1,9 +1,11 @@
-export const sidebar = [
+import { defaultThemeConfig } from "./default.mts";
+
+const sidebar = [
     {
         text: "Guías",
         items: [
-          { text: "Contribuir", link: "/es/guides/contribute" },
-          { text: "Traducciones", link: "/es/guides/translations" }
+            { text: "Contribuir", link: "/es/guides/contribute" },
+            { text: "Traducciones", link: "/es/guides/translations" }
         ]
     },
     {
@@ -65,10 +67,32 @@ export const sidebar = [
                 collapsed: true,
                 items: [
                     { text: "Cómo Empezar", link: "/es/learn/development/git/get-started" },
-                    { text: "Primeros Pasos", link: "/es/learn/development/git/first-steps" }
+                    { text: "Primeros Pasos", link: "/es/learn/development/git/first-steps" },
+                    { text: "Personalizando Git", link: "/es/learn/development/git/customizing-git" }
                 ]
             }
         ]
 
     }
-]
+];
+
+export const themeConfig = {
+    nav: [
+        { text: "Home", link: "/en/" },
+        { text: "Examples", link: "/markdown-examples" }
+    ],
+    sidebar,
+    outlineTitle: "En esta página",
+    editLink: {
+        pattern: defaultThemeConfig.editLink.pattern,
+        text: "Editar esta página"
+    },
+    lastUpdated: {
+        text: "Actualizado en"
+    },
+    docFooter: {
+        prev: "Página anterior",
+        next: "Próxima página"
+    }
+    // Default by Vitepress.
+};

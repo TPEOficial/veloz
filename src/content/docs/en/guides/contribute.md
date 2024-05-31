@@ -3,7 +3,8 @@ title: Contribute
 description: How to contribute to the project
 ---
 
-# Contribute
+**Contribute**
+=====================
 
 ## How can I contribute?
  - Create a new course, blog or tutorial.
