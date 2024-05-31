@@ -2,12 +2,13 @@ const sidebar = [
     {
         text: "Guides",
         items: [
-          { text: "Contribute", link: "/en/guides/contribute" },
-          { text: "Translations", link: "/en/guides/translations" }
+            { text: "Contribute", link: "/en/guides/contribute" },
+            { text: "Translations", link: "/en/guides/translations" }
         ]
     },
     {
         text: "Artificial Intelligence",
+        collapsed: true,
         items: [
             {
                 text: "Concepts",
@@ -24,10 +25,64 @@ const sidebar = [
                 ]
             }
         ]
-
+    },
+    {
+        text: "Machine Learning",
+        collapsed: true,
+        items: [
+            {
+                text: "Concepts",
+                collapsed: true,
+                items: [
+                    {
+                        text: "From Scratch",
+                        items: [
+                            { text: "Get Started", link: "/en/learn/machine-learning/concepts/scratch/get-started" },
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Deep Learning",
+        collapsed: true,
+        items: [
+            {
+                text: "Concepts",
+                collapsed: true,
+                items: [
+                    {
+                        text: "From Scratch",
+                        items: [
+                            { text: "Get Started", link: "/en/learn/deep-learning/concepts/scratch/get-started" },
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Data Science",
+        collapsed: true,
+        items: [
+            {
+                text: "Concepts",
+                collapsed: true,
+                items: [
+                    {
+                        text: "From Scratch",
+                        items: [
+                            { text: "Get Started", link: "/en/learn/data-science/concepts/scratch/get-started" }
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     {
         text: "Databases",
+        collapsed: true,
         items: [
             {
                 text: "Redis",
@@ -42,10 +97,10 @@ const sidebar = [
                 ]
             }
         ]
-
     },
     {
         text: "Development",
+        collapsed: true,
         items: [
             {
                 text: "Concepts",
@@ -70,7 +125,45 @@ const sidebar = [
                 ]
             }
         ]
-
+    },
+    {
+        text: "Languages",
+        collapsed: true,
+        items: [
+            {
+                text: "Python",
+                collapsed: true,
+                items: [
+                    { text: "Get Started", link: "/en/learn/languages/python/get-started" }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Technologies",
+        collapsed: true,
+        items: [
+            {
+                text: "React",
+                collapsed: true,
+                items: [
+                    { text: "Get Started", link: "/en/learn/technologies/react/get-started" }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Frameworks",
+        collapsed: true,
+        items: [
+            {
+                text: "React Native",
+                collapsed: true,
+                items: [
+                    { text: "Get Started", link: "/en/learn/frameworks/react-native/get-started" }
+                ]
+            }
+        ]
     }
 ];
 

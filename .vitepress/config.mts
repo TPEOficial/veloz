@@ -52,6 +52,7 @@ export default defineConfig({
       dark: "/dark.svg",
       alt: "Veloz",
     },
+    logoLink: "/",
     editLink: {
       pattern: defaultThemeConfig.editLink.pattern
     },

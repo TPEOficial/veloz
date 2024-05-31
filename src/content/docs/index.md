@@ -1,35 +1,60 @@
 ---
-title: Welcome to Veloz
-description: Get started building your docs site with Veloz.
-template: splash
+
+# https://vitepress.dev/reference/default-theme-home-page
+layout: home
+
 hero:
-  tagline: Congrats on setting up a new Veloz project!
-  image:
-    file: ../../assets/houston.webp
+  name: "Veloz"
+  text: "Improve your technology skills"
+  tagline: 🚀 Empower Your Future with Cutting-Edge Tech Skills
   actions:
-    - text: Learn
+    - theme: brand
+      text: Get Started
       link: /en/getting-started
-      icon: right-arrow
-    - text: Read the Veloz docs
-      link: https://starlight.astro.build
-      icon: external
+    - theme: alt
+      text: Contribute
+      link: /en/guides/contribute
+  image:
+    src: /home_image.webp
+    alt: Veloz
+
+features:
+  - icon: 📝
+    title: All in one
+    details: All the information you need here. Learn in community and improve your skills.
+  - icon: 🆓
+    title: All for free
+    details: All the information available in this project is Open Source, and completely free of charge.
+  - icon: 🎗️
+    title: Open Source
+    details: Send us your courses, suggestions or whatever you can think of!
+  - icon: 🔣
+    title: Multi-language
+    details: Enjoy the content in different languages to be able to understand everything perfectly.
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+<style>
+:root {
+  --vp-home-hero-name-color: transparent;
+  --vp-home-hero-name-background: -webkit-linear-gradient(120deg, #bd34fe 30%, #41d1ff);
 
-## Next steps
+  --vp-home-hero-image-background-image: linear-gradient(-45deg, #bd34fe 50%, #47caff 50%);
+  --vp-home-hero-image-filter: blur(44px);
+}
 
-<CardGrid stagger>
-	<Card title="Update content" icon="pencil">
-		Edit `src/content/docs/index.mdx` to see this page change.
-	</Card>
-	<Card title="Add new content" icon="add-document">
-		Add Markdown or MDX files to `src/content/docs` to create new pages.
-	</Card>
-	<Card title="Configure your site" icon="setting">
-		Edit your `sidebar` and other config in `astro.config.mjs`.
-	</Card>
-	<Card title="Read the docs" icon="open-book">
-		Learn more in [the starlight Docs](https://starlight.astro.build/).
-	</Card>
-</CardGrid>
+@media (min-width: 640px) {
+  :root {
+    --vp-home-hero-image-filter: blur(56px);
+  }
+}
+
+@media (min-width: 960px) {
+  :root {
+    --vp-home-hero-image-filter: blur(68px);
+  }
+}
+
+img.VPImage.image-src {
+  zoom: 2;
+}
+</style>

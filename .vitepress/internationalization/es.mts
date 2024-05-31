@@ -10,13 +10,14 @@ const sidebar = [
     },
     {
         text: "Inteligencia artificial",
+        collapsed: true,
         items: [
             {
                 text: "Conceptos",
                 collapsed: true,
                 items: [
                     {
-                        text: "From Scratch",
+                        text: "Desde cero",
                         items: [
                             { text: "Cómo Empezar", link: "/es/learn/artificial-intelligence/concepts/scratch/get-started" },
                             { text: "Regresión Logística", link: "/es/learn/artificial-intelligence/concepts/scratch/logistic-regression" },
@@ -26,10 +27,64 @@ const sidebar = [
                 ]
             }
         ]
-
+    },
+    {
+        text: "Machine Learning",
+        collapsed: true,
+        items: [
+            {
+                text: "Conceptos",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Desde cero",
+                        items: [
+                            { text: "Cómo Empezar", link: "/es/learn/machine-learning/concepts/scratch/get-started" },
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Deep Learning",
+        collapsed: true,
+        items: [
+            {
+                text: "Conceptos",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Desde cero",
+                        items: [
+                            { text: "Cómo Empezar", link: "/es/learn/deep-learning/concepts/scratch/get-started" },
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Ciencia de Datos",
+        collapsed: true,
+        items: [
+            {
+                text: "Conceptos",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Desde cero",
+                        items: [
+                            { text: "Cómo Empezar", link: "/es/learn/data-science/concepts/scratch/get-started" }
+                        ]
+                    }
+                ]
+            }
+        ]
     },
     {
         text: "Bases de Datos",
+        collapsed: true,
         items: [
             {
                 text: "Redis",
@@ -44,17 +99,17 @@ const sidebar = [
                 ]
             }
         ]
-
     },
     {
         text: "Programación",
+        collapsed: true,
         items: [
             {
                 text: "Conceptos",
                 collapsed: true,
                 items: [
                     {
-                        text: "From Scratch",
+                        text: "Desde cero",
                         items: [
                             { text: "Cómo Empezar", link: "/es/learn/development/concepts/scratch/get-started" },
                             { text: "Tipos de Lenguajes de Programación", link: "/es/learn/development/concepts/scratch/programming-language-types" }
@@ -72,13 +127,51 @@ const sidebar = [
                 ]
             }
         ]
-
+    },
+    {
+        text: "Lenguajes",
+        collapsed: true,
+        items: [
+            {
+                text: "Python",
+                collapsed: true,
+                items: [
+                    { text: "Cómo Empezar", link: "/es/learn/languages/python/get-started" }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Tecnologías",
+        collapsed: true,
+        items: [
+            {
+                text: "React",
+                collapsed: true,
+                items: [
+                    { text: "Cómo Empezar", link: "/es/learn/technologies/react/get-started" }
+                ]
+            }
+        ]
+    },
+    {
+        text: "Frameworks",
+        collapsed: true,
+        items: [
+            {
+                text: "React Native",
+                collapsed: true,
+                items: [
+                    { text: "Cómo Empezar", link: "/es/learn/frameworks/react-native/get-started" }
+                ]
+            }
+        ]
     }
 ];
 
 export const themeConfig = {
     nav: [
-        { text: "Home", link: "/en/" },
+        { text: "Home", link: "/" },
         { text: "Examples", link: "/markdown-examples" }
     ],
     sidebar,
