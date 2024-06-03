@@ -73,7 +73,8 @@ const sidebar = [
                     {
                         text: "From Scratch",
                         items: [
-                            { text: "Get Started", link: "/en/learn/data-science/concepts/scratch/get-started" }
+                            { text: "Get Started", link: "/en/learn/data-science/concepts/scratch/get-started" },
+                            { text: "Hash Table", link: "/en/learn/data-science/concepts/scratch/hash-table" },
                         ]
                     }
                 ]

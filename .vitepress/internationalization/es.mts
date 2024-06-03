@@ -75,7 +75,8 @@ const sidebar = [
                     {
                         text: "Desde cero",
                         items: [
-                            { text: "Cómo Empezar", link: "/es/learn/data-science/concepts/scratch/get-started" }
+                            { text: "Cómo Empezar", link: "/es/learn/data-science/concepts/scratch/get-started" },
+                            { text: "Tabla Hash", link: "/es/learn/data-science/concepts/scratch/hash-table" }
                         ]
                     }
                 ]

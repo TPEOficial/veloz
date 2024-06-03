@@ -1,44 +1,31 @@
 ---
 title: Redis en NodeJS
 description: Conceptos básicos de Redis en NodeJS.
-prev:
-  link: /es/learn/redis
-  label: Get started
-next:
-  link: /unrelated-page/
-  label: Check out this other page
 ---
 
-import { Tabs, TabItem } from "@astrojs/starlight/components";
+**Usando Redis en Node.js**
+=====================
 
-## Usando Redis en Node.js
-
-### Prerrequisitos
+## Prerrequisitos
 
 - Node.js instalado en tu sistema.
 - Servidor Redis ejecutándose en tu máquina o accesible remotamente.
 
-### Paso 1: Instalar Cliente Redis para Node.js
+## Paso 1: Instalar Cliente Redis para Node.js
 Utiliza el instalador de paquetes que prefieras para instalar el paquete de `redis`:
-<Tabs>
-  <TabItem label="npm">
-    ```shell
-    npm install redis
-    ```
-  </TabItem>
-  <TabItem label="pnpm">
-    ```shell
-    pnpm install redis
-    ```
-  </TabItem>
-  <TabItem label="yarn">
-    ```shell
-    yarn install redis
-    ```
-  </TabItem>
-</Tabs>
+::: code-group
+```sh [npm]
+$ npm install redis
+```
+```sh [pnpm]
+$ pnpm install redis
+```
+```sh [yarn]
+$ yarn install redis
+```
+:::
 
-### Paso 2: Requerir Redis en tu aplicación Node.js
+## Paso 2: Requerir Redis en tu aplicación Node.js
 
 Requiere el módulo `redis` en tu aplicación Node.js:
 
@@ -48,9 +35,9 @@ const redis = require('redis');
 import redis from "redis";
 ```
 
-### Step 3: Create a Redis Client
+## Paso 3: Crear un cliente de Redis
 
-Creat un cliente de Redis usando `createClient()`:
+Crea un cliente de Redis usando `createClient()`:
 
 Si no indicamos ningún puerto o host a `createClient()`, utilizará como valores por defecto **6379** para el puerto y localhost como servidor.
 
@@ -58,7 +45,7 @@ Si no indicamos ningún puerto o host a `createClient()`, utilizará como valore
 const client = redis.createClient(/*port, host*/);
 ```
 
-### Paso 4: Interactuar con Redis
+## Paso 4: Interactuar con Redis
 
 Utiliza el cliente para interactuar con Redis:
 
@@ -74,7 +61,7 @@ client.incr('contador', function(err, reply) {
 });
 ```
 
-### Paso 5: Gestión de errores
+## Paso 5: Gestión de errores
 
 Control de errores que puedan ocurrir durante las operaciones de Redis:
 
@@ -88,7 +75,7 @@ client.get('claveNoExistente', function(err, reply) {
 });
 ```
 
-### Paso 6: Cerrar la conexión
+## Paso 6: Cerrar la conexión
 
 Cerrar la conexión con el servidor Redis:
 
@@ -96,9 +83,9 @@ Cerrar la conexión con el servidor Redis:
 client.quit();
 ```
 
-### Otras funcionalidades
+## Otras funcionalidades
 
-#### MSET
+### MSET
 
 Con `mset()` asignamos una lista de pares clave-valor en una operación atómica. Con `mget()` obtenemos la matriz de valores asociada a una lista de claves pasada como serie clave-valor.
 
@@ -112,7 +99,7 @@ client.mget(['a', 'b', 'c'], function (err, res) {
 });
 ```
 
-#### DEL
+### DEL
 
 Con `del()` borramos una clave o lista de claves.
 
@@ -122,7 +109,7 @@ client.del('foo', function(err, reply) {
 });
 ```
 
-#### INCR, DECR, INCRBY, DECRBY
+### INCR, DECR, INCRBY, DECRBY
 
 `incr` y `decr` incrementan o decrementan el valor de la clave especificada en 1.
 
@@ -145,7 +132,7 @@ client.get('contador', function(err, reply) {
 });
 ```
 
-#### EXIST
+### EXIST
 
 El método `exist()` permite determinar si la clave pasada como parámetro existe o no. El siguiente ejemplo muestra si la clave `saludo` existe.
 
@@ -160,7 +147,7 @@ if (client.exists('saludo',  function(err, reply) {
 }));
 ```
 
-#### LISTAS
+### LISTAS
 
 Las listas son colecciones de valores que admiten repetición.
 
@@ -190,7 +177,7 @@ client.lrange('sesiones:ggvd', 0, -1, function(err, reply) {
 client.del('sesiones:ggvd');
 ```
 
-#### SETS
+### SETS
 
 Los conjuntos son colecciones de valores que no admiten duplicados.
 
@@ -219,7 +206,7 @@ client.scard('estudiantes:ggvd', function(err, reply){
 client.del('estudiantes:ggvd');
 ```
 
-#### SET OPERATIONS
+### SET OPERATIONS
 
 `sunion`, `sinter` y `sdiff` obtienen respectivamente la unión, la intersección y la diferencia de conjuntos.
 
@@ -247,7 +234,7 @@ client.sdiff('estudiantes:bd', 'estudiantes:ggvd', function(err, reply) {
 client.del('estudiantes:ggvd');
 ```
 
-#### SORTED SETS
+### SORTED SETS
 
 Sorted sets are sets whose elements are accompanied by a score that allows ordering in the set.
 
@@ -282,7 +269,7 @@ client.zrangebyscore('scores:ggvd', 5, 10, function(err, reply) {
 client.del('scores:ggvd');
 ```
 
-#### HASHES
+### HASHES
 
 Hashes are lists of field-value pairs associated with a key.
 
@@ -311,7 +298,7 @@ client.hkeys('professor:mtorres', function(err, keys) {
 client.del('professor:mtorres');
 ```
 
-#### TRANSACCIONES
+### TRANSACCIONES
 
 Las transacciones se inician con `multi()`. Para finalizar la transacción, utilizaremos:
 

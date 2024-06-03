@@ -1,5 +1,5 @@
 # build output
-dist/
+# dist/
 server/redirects.json
 
 # generated types

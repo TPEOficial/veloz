@@ -3,16 +3,15 @@ title: Redis in NodeJS
 description: Redis Basics in NodeJS.
 ---
 
-# Redis
+**Using Redis in Node.js**
+=====================
 
-## Using Redis in Node.js
-
-### Prerequisites
+## Prerequisites
 
 - Node.js installed on your system.
 - Redis server running on your machine or accessible remotely.
 
-### Step 1: Install Redis Client for Node.js
+## Step 1: Install Redis Client for Node.js
 Use your preferred package installer to install the `redis` package:
 ::: code-group
 ```sh [npm]
@@ -26,7 +25,7 @@ $ yarn install redis
 ```
 :::
 
-### Step 2: Require Redis in Your Node.js Application
+## Step 2: Require Redis in Your Node.js Application
 
 Require the `redis` module in your Node.js application:
 
@@ -36,7 +35,7 @@ const redis = require('redis');
 import redis from "redis";
 ```
 
-### Step 3: Create a Redis Client
+## Step 3: Create a Redis Client
 
 Create a Redis client using `createClient()`:
 
@@ -46,7 +45,7 @@ If we do not indicate any port or host to `createClient()`, it will use as defau
 const client = redis.createClient(/*port, host*/);
 ```
 
-### Step 4: Interact with Redis
+## Step 4: Interact with Redis
 
 Use the client to interact with Redis:
 
@@ -62,7 +61,7 @@ client.incr('counter', function(err, reply) {
 });
 ```
 
-### Step 5: Handle Errors
+## Step 5: Handle Errors
 
 Handle errors that may occur during Redis operations:
 
@@ -76,7 +75,7 @@ client.get('nonexistentKey', function(err, reply) {
 });
 ```
 
-### Step 6: Close the Connection
+## Step 6: Close the Connection
 
 Close the connection to the Redis server:
 
@@ -84,9 +83,9 @@ Close the connection to the Redis server:
 client.quit();
 ```
 
-### Other functionalities
+## Other functionalities
 
-#### MSET
+### MSET
 
 With `mset()` we assign a list of key-value pairs in an atomic operation. With `mget()` we get the array of values associated with a list of keys passed as a key-value series.
 
@@ -100,7 +99,7 @@ client.mget(['a', 'b', 'c'], function (err, res) {
 });
 ```
 
-#### DEL
+### DEL
 
 With `del()` we delete a key or list of keys.
 
@@ -110,7 +109,7 @@ client.del('foo', function(err, reply) {
 });
 ```
 
-#### INCR, DECR, INCRBY, DECRBY
+### INCR, DECR, INCRBY, DECRBY
 
 `incr` and `decr` increment or decrement the value of the specified key by 1.
 
@@ -133,7 +132,7 @@ client.get('counter', function(err, reply) {
 });
 ```
 
-#### EXIST
+### EXIST
 
 The `exist()` method allows to determine if the key passed as parameter exists or not. The following example shows whether the `greeting` key exists.
 
@@ -148,7 +147,7 @@ if (client.exists('greeting',  function(err, reply) {
 }));
 ```
 
-#### LISTS
+### LISTS
 
 Lists are collections of values that support repetition.
 
@@ -178,7 +177,7 @@ client.lrange('sessions:ggvd', 0, -1, function(err, reply) {
 client.del('sessions:ggvd');
 ```
 
-#### SETS
+### SETS
 
 Sets are collections of values that do not allow duplicates.
 
@@ -207,7 +206,7 @@ client.scard('students:ggvd', function(err, reply){
 client.del('students:ggvd');
 ```
 
-#### SET OPERATIONS
+### SET OPERATIONS
 
 `sunion`, `sinter`, and `sdiff` respectively obtain the union, intersection, and difference of sets.
 
@@ -235,7 +234,7 @@ client.sdiff('students:bd', 'students:ggvd', function(err, reply) {
 client.del('students:ggvd');
 ```
 
-#### SORTED SETS
+### SORTED SETS
 
 Sorted sets are sets whose elements are accompanied by a score that allows ordering in the set.
 
@@ -270,7 +269,7 @@ client.zrangebyscore('scores:ggvd', 5, 10, function(err, reply) {
 client.del('scores:ggvd');
 ```
 
-#### HASHES
+### HASHES
 
 Hashes are lists of field-value pairs associated with a key.
 
@@ -299,7 +298,7 @@ client.hkeys('professor:mtorres', function(err, keys) {
 client.del('professor:mtorres');
 ```
 
-#### TRANSACTIONS
+### TRANSACTIONS
 
 Transactions are initiated with `multi()`. To end the transaction, we'll use:
 
