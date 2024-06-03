@@ -124,7 +124,8 @@ const sidebar = [
                 items: [
                     { text: "Cómo Empezar", link: "/es/learn/development/git/get-started" },
                     { text: "Primeros Pasos", link: "/es/learn/development/git/first-steps" },
-                    { text: "Personalizando Git", link: "/es/learn/development/git/customizing-git" }
+                    { text: "Personalizando Git", link: "/es/learn/development/git/customizing-git" },
+                    { text: "Logging", link: "/es/learn/development/git/logging" }
                 ]
             }
         ]

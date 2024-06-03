@@ -14,6 +14,14 @@ Una tabla hash se puede ver como un conjunto de entradas. Cada una de estas entr
 
 Por otro lado, las entradas de las tablas hash están compuestas por dos componentes, la propia clave y la información que se almacena en dicha entrada.
 
+::: details Fácil & Rápido
+Una **tabla hash** es como una gran caja de almacenamiento con muchos compartimentos donde puedes guardar cosas de manera rápida y fácil.
+
+Imagina que tienes una lista de juguetes y quieres encontrar uno rápidamente. La tabla hash usa una especie de **"truco mágico"** llamado función hash que convierte el nombre del juguete en un número, y ese número te dice en qué compartimento de la caja está guardado.
+
+Así, puedes encontrar tu juguete favorito sin tener que buscar en todos los compartimentos uno por uno.
+:::
+
 ### ¿Cómo funciona una tabla hash?
 
 1. **La función hash**: Una función hash toma una clave como entrada y devuelve un índice o dirección dentro de la tabla hash donde debe almacenarse el valor correspondiente. El objetivo de la función hash es distribuir las claves uniformemente por la tabla para minimizar las colisiones (cuando dos o más claves se asignan al mismo índice).

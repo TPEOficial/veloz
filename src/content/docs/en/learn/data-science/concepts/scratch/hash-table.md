@@ -14,6 +14,14 @@ A hash table can be viewed as a set of entries. Each of these entries has a uniq
 
 On the other hand, hash table entries are composed of two components, the key itself and the information stored in that entry.
 
+::: details Quick & Easy
+A **hash table** is like a big storage box with many compartments where you can store things quickly and easily.
+
+Imagine you have a list of toys and you want to find one quickly. The hash table uses a kind of **"magic trick"** called a hash function that converts the name of the toy into a number, and that number tells you in which compartment of the box it is stored.
+
+So, you can find your favorite toy without having to search through all the compartments one by one.
+:::
+
 ### How does a Hash Table work?
 
 1. **The hash function**: A hash function takes a key as input and returns an index or address within the hash table where the corresponding value should be stored. The hash function aims to distribute the keys evenly across the table to minimize collisions (when two or more keys are mapped to the same index).
