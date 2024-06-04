@@ -59,6 +59,16 @@ const sidebar = [
                         ]
                     }
                 ]
+            },
+            {
+                text: "Prompt Engineering",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Get Started",
+                        link: "/en/learn/deep-learning/prompt-engineering/get-started"
+                    }
+                ]
             }
         ]
     },

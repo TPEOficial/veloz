@@ -61,6 +61,16 @@ const sidebar = [
                         ]
                     }
                 ]
+            },
+            {
+                text: "Ingeniería de Prompt",
+                collapsed: true,
+                items: [
+                    {
+                        text: "Cómo Empezar",
+                        link: "/es/learn/deep-learning/prompt-engineering/get-started"
+                    }
+                ]
             }
         ]
     },
