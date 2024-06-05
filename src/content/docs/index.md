@@ -28,9 +28,19 @@ features:
   - icon: 🎗️
     title: Open Source
     details: Send us your courses, suggestions or whatever you can think of!
+    link: https://github.com/TPEOficial/veloz/
+    linkText: See project structure
   - icon: 🔣
     title: Multi-language
     details: Enjoy the content in different languages to be able to understand everything perfectly.
+  - icon: 💸
+    title: Earn by teaching
+    details: We monetize the website with ads in order to offer you a symbolic amount for supporting the community.
+    link: /en/guides/contribute/
+    linkText: See project structure
+  - icon: 🌐
+    title: All about technology from 0
+    details: You can learn from 0 the basic concepts of all available areas. You will surely find new concepts that you did not know before.
 ---
 
 <style>
